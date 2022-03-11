@@ -25,14 +25,14 @@ app.post("/verify-password", async (req, res) => {
   }
 });
 app.post("/getpasswords", async (req, res) => {
-  let data2 = [];
+  let hashedPassword = [];
   const passwords = req.body.passwords;
   let i;
   for(i=0;i<=passwords.length-1;i++) {
     const hash = await bcrypt.hash(passwords[i], 12);
     const data = { hash: hash, password: passwords[i] };
-    data2.push(data);
-    console.log(data2);
+    hashedPassword.push(data);
+    console.log(hashedPassword);
 
   }
 
@@ -43,5 +43,5 @@ app.post("/getpasswords", async (req, res) => {
     console.log(data2);
     
   });*/
-  res.json({ hashedPassword: data2 });
+  res.json({ hashedPassword: hashedPassword });
 });
