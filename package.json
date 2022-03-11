@@ -1,0 +1,20 @@
+{
+  "name": "express-password-encrypt",
+  "version": "1.0.0",
+  "description": "To encode password using bcrypt",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Password",
+    "encrypt"
+  ],
+  "author": "Vivek Modi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
